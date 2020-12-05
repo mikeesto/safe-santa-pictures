@@ -1,0 +1,33 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+
+.underline {
+  background-image: linear-gradient(120deg, #84fab0 0%, #84fab0 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.underline:hover {
+  background-size: 100% 88%;
+}
+
+#file-input {
+  display: none;
+}
+
+#download-button {
+  display: none;
+}
+
+.button {
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+}
