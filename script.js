@@ -1,21 +1,21 @@
-const canvas = document.getElementById("myCanvas");
-const context = canvas.getContext("2d");
-const input = document.getElementById("file-input");
-const selectBtn = document.getElementById("select-button");
-const downloadBtn = document.getElementById("download-button");
+const canvas = document.getElementById('myCanvas');
+const context = canvas.getContext('2d');
+const input = document.getElementById('file-input');
+const selectBtn = document.getElementById('select-button');
+const downloadBtn = document.getElementById('download-button');
 
-selectBtn.addEventListener("click", () => {
+selectBtn.addEventListener('click', () => {
   input.click();
 });
 
-downloadBtn.addEventListener("click", () => {
-  const link = document.createElement("a");
-  link.download = "santa.png";
+downloadBtn.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.download = 'santa.png';
   link.href = canvas.toDataURL();
   link.click();
 });
 
-input.addEventListener("change", handleFile);
+input.addEventListener('change', handleFile);
 
 function drawSanta() {
   const santa = new Image();
@@ -23,7 +23,7 @@ function drawSanta() {
     context.drawImage(santa, 0, 0);
   };
 
-  santa.src = "./santa.png";
+  santa.src = './santa.png';
 }
 
 function handleFile(e) {
@@ -38,11 +38,11 @@ function handleFile(e) {
       270,
       90,
       image.width * ratio,
-      image.height * ratio
+      image.height * ratio,
     );
 
-    selectBtn.style.display = "none";
-    downloadBtn.style.display = "block";
+    selectBtn.style.display = 'none';
+    downloadBtn.style.display = 'block';
   };
 
   image.src = URL.createObjectURL(e.target.files[0]);
